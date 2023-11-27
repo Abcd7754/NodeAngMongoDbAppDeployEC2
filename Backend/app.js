@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
 const mongoose = require("mongoose")
-
+var cors= require('cors');
 // Database Address
 const url = "mongodb://localhost:27017/ColorShapeDb"
+
+app.use(cors());
 
 // Connecting to database
 mongoose.connect(url).then((ans) => {
